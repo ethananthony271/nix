@@ -63,15 +63,15 @@ eval set -- "$VALID_ARGS"
 while [ : ]; do
   case "$1" in
     -c | --clean)
-      for file in $(find $courseDirectory/notes -mindepth 1 -maxdepth 1 -type f -name "*.*" ! -name "*.tex" ! -name "*.pdf"); do 
-        rm "$file"
+      find "$courseDirectory"/notes -mindepth 1 -maxdepth 1 -type f -name "*.*" ! -name "*.tex" ! -name "*.pdf" | while IFS= read -r file; do
+        echo "$file"
       done
       shift
       ;;
 
     -C | --full-clean)
-      for file in $(find $courseDirectory/notes -mindepth 1 -maxdepth 1 -type f -name "*.*" ! -name "*.tex"); do 
-        rm "$file"
+      find "$courseDirectory"/notes -mindepth 1 -maxdepth 1 -type f -name "*.*" ! -name "*.tex" | while IFS= read -r file; do
+        echo "$file"
       done
       shift
       ;;
