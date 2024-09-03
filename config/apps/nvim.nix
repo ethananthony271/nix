@@ -1,8 +1,6 @@
 { pkgs, ... }: {
 
-  # TODO: nixvim?
-
-  home.packages = with args; [
+  home.packages = with pkgs; [
     neovim
     python3
     luajitPackages.luarocks
