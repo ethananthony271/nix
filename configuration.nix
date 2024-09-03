@@ -103,12 +103,6 @@
     neovim
     vim
     rofi-wayland
-    eza
-    ripgrep
-    zsh
-    zoxide
-    fzf
-    bottom
     lazygit
     foot
     zellij
@@ -129,7 +123,6 @@
     nodejs_22
     wl-clipboard
     wl-clip-persist
-    fd
     texliveFull
     zathura
     syncthing
