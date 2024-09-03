@@ -17,6 +17,7 @@ let
     gm   = "git merge"                                ;
     gf   = "git fetch"                                ;
     gz   = "lazygit"                                  ;
+
     z    = "zellij"                                   ;
     za   = "zellij attach"                            ;
     zd   = "zellij delete-session"                    ;
@@ -27,7 +28,9 @@ let
     zl   = "zellij list-sessions"                     ;
     zr   = "zellij run"                               ;
     ze   = "zellij run"                               ;
+
     cat  = "bat --theme gruvbox-dark "                ;
+
     p    = "python3"                                  ;
     h    = "fc -ln 1 | fzf | wl-copy"                 ;
     v    = "nvim"                                     ;
@@ -37,7 +40,6 @@ let
     d    = "yazi"                                     ;
     n    = "ncmpcpp"                                  ;
     f    = "fzf --preview 'bat --color=always {}'"    ;
-    btl  = "bluetoothctl"                             ;
   };
 in
   {
@@ -82,5 +84,19 @@ in
       eval "$(fzf --zsh)"
       eval "$(zoxide init --cmd cd zsh)"
     '';
+  };
+
+  home.packages = with pkgs; {
+    zsh
+    bash
+    fd
+    bat
+    eza
+    gping
+    delta
+    ripgrep
+    zoxide
+    fzf
+    bottom
   };
 }
