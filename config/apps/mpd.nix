@@ -40,6 +40,7 @@
       visualizer_in_stereo      = ''"yes"''                   ;
       visualizer_type           = ''"ellipse"''               ;
       visualizer_look           = ''"󰝤󰝤"''                    ;
+      # TODO: visualizer not working
     };
     bindings = [
       { key = "y"        ; command = "dummy"                                                                                                                                   ; }
