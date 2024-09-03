@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 let
   myAliases = {
     sudo = "sudo "                                                                ;
@@ -23,7 +23,6 @@ let
     zK   = "zellij kill-all-sessions"                                             ;
     zp   = "zellij list-aliases"                                                  ;
     zl   = "zellij list-sessions"                                                 ;
-    zl   = "zellij list-sessions"                                                 ;
     zr   = "zellij run"                                                           ;
     ze   = "zellij run"                                                           ;
     cat  = "bat --theme gruvbox-dark "                                            ;
@@ -39,7 +38,7 @@ let
     btl  = "bluetoothctl"                                                         ;
   };
 in
-{
+  {
   home.stateVersion = "24.05";
 
   home.username = "ea";
@@ -80,28 +79,18 @@ in
       ignoreSpace = true;
       ignoreAllDups = true;
     };
-    enableCompletion = false;
-    plugins = [
-      {
-        name = "zsh-completions";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-completions";
-          rev = "0.27.0";
-          sha256 = "1c2xx9bkkvyy0c6aq9vv3fjw7snlm0m5bjygfk5391qgjpvchd29";
-        };
-      }
-      {
-        name = "zsh-syntax-highlighting";
-        src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-syntax-highlighting";
-          rev = "master";
-          sha256 = "0zmq66dzasmr5pwribyh4kbkk23jxbpdw4rjxx0i7dx8jjp2lzl4";
-        };
-        file = "zsh-syntax-highlighting.zsh";
-      }
-    ];
+    enableCompletion = true;
+    autosuggestion = {
+      enable = true;
+      # highlight = "fg=blue,bg=white,underline";
+    };
+    syntaxHighlighting = {
+      enable = true;
+      # styles = {
+      #   command = "fg=green,bold";
+      # };
+    };
+    plugins = [ ];
   };
 
   home.sessionVariables = {
