@@ -1,5 +1,44 @@
 { config, pkgs, ... }:
-
+let
+  myAliases = {
+    sudo = "sudo "                                                                ;
+    ls   = "eza --group-directories-first"                                        ;
+    la   = "eza --all --long --header --git --hyperlink --group-directories-first";
+    lt   = "eza --hyperlink --tree --group-directories-first --level=3"           ;
+    ga   = "git add "                                                             ;
+    gs   = "git status "                                                          ;
+    gd   = "git diff "                                                            ;
+    gc   = "git commit -m "                                                       ;
+    gb   = "git branch "                                                          ;
+    go   = "git checkout "                                                        ;
+    gp   = "git push "                                                            ;
+    gm   = "git merge "                                                           ;
+    gf   = "git fetch "                                                           ;
+    gz   = "lazygit"                                                              ;
+    z    = "zellij"                                                               ;
+    za   = "zellij attach"                                                        ;
+    zd   = "zellij delete-session"                                                ;
+    zD   = "zellij delete-all-sessions"                                           ;
+    zk   = "zellij kill-session"                                                  ;
+    zK   = "zellij kill-all-sessions"                                             ;
+    zp   = "zellij list-aliases"                                                  ;
+    zl   = "zellij list-sessions"                                                 ;
+    zl   = "zellij list-sessions"                                                 ;
+    zr   = "zellij run"                                                           ;
+    ze   = "zellij run"                                                           ;
+    cat  = "bat --theme gruvbox-dark "                                            ;
+    p    = "python3"                                                              ;
+    h    = "fc -ln 1 | fzf | wl-copy"                                             ;
+    v    = "nvim"                                                                 ;
+    c    = "clear"                                                                ;
+    q    = "exit"                                                                 ;
+    m    = "neomutt"                                                              ;
+    d    = "yazi"                                                                 ;
+    n    = "ncmpcpp"                                                              ;
+    f    = "fzf --preview 'bat --color=always {}'"                                ;
+    btl  = "bluetoothctl"                                                         ;
+  };
+in
 {
   home.stateVersion = "24.05";
 
