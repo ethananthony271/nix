@@ -54,7 +54,7 @@ echoHelpMessage () {
 }
 
 if [[ -d "$1" ]]; then
-  if [[ $(find $1 -maxdepth 1 -mindepth 1 -type f -name info.json | wc -l) = 1 ]]; then
+  if [[ $(find "$1" -maxdepth 1 -mindepth 1 -type f -name info.json | wc -l) = 1 ]]; then
     coursePath="$1"
     shift
   else
@@ -62,16 +62,13 @@ if [[ -d "$1" ]]; then
     exit 1
   fi
 else
-  coursePath="$(readlink -n $CURRCOURSE)"
+  coursePath="$(readlink -n "$CURRCOURSE")"
 fi
 
-VALID_ARGS=$(getopt -o tscnredxREDpfFlLh --long title,short,code,number,start,end,days,has-lab,lab-start,lab-end,lab-days,path,last-figure,next-figure,last-lecture,next-lecture,help -- "$@")
-if [[ $? -ne 0 ]]; then
-  exit 1;
-fi
+ARGS=$(getopt -o tscnredxREDpfFlLh --long title,short,code,number,start,end,days,has-lab,lab-start,lab-end,lab-days,path,last-figure,next-figure,last-lecture,next-lecture,help -- "$@")
 
-eval set -- "$VALID_ARGS"
-while [ : ]; do
+eval set -- "$ARGS"
+while [[ 1 -eq 1 ]]; do
   case "$1" in
     -t | --title)
       jq -r .name.title "$coursePath/info.json"
@@ -146,7 +143,7 @@ while [ : ]; do
       ;;
 
     -f | --last-figure)
-      mapfile -t figures < <(find $coursePath/notes -regextype posix-extended -regex '.*fig_[0-9]{3}\.tex.*' | sort)
+      mapfile -t figures < <(find "$coursePath"/notes -regextype posix-extended -regex '.*fig_[0-9]{3}\.tex.*' | sort)
       if [[ ${#figures[@]} -gt 0 ]]; then
         echo "${figures[${#figures[@]} - 1]}"
       else
@@ -156,19 +153,19 @@ while [ : ]; do
       ;;
 
     -F | --next-figure)
-      mapfile -t figures < <(find $coursePath/notes -regextype posix-extended -regex '.*fig_[0-9]{3}\.tex.*' | sort)
+      mapfile -t figures < <(find "$coursePath"/notes -regextype posix-extended -regex '.*fig_[0-9]{3}\.tex.*' | sort)
       if [[ ${#figures[@]} -gt 0 ]]; then
-        lastNumber="$(echo ${figures[${#figures[@]} - 1]} | sed 's/.*\/fig_\([0-9]\{3\}\).tex/\1/' | sed 's/[0]*\([1-9]*\)/\1/')"
-        nextNumber=$(printf "%03d" $(($lastNumber + 1)))
-        echo "$(readlink -n $CURRCOURSE)/notes/figures/fig_$nextNumber.tex"
+        lastNumber="$(echo "${figures[${#figures[@]} - 1]}" | sed 's/.*\/fig_\([0-9]\{3\}\).tex/\1/' | sed 's/[0]*\([1-9]*\)/\1/')"
+        nextNumber=$(printf "%03d" $((lastNumber + 1)))
+        echo "$(readlink -n "$CURRCOURSE")/notes/figures/fig_$nextNumber.tex"
       else
-        echo "$(readlink -n $CURRCOURSE)/notes/figures/fig_001.tex"
+        echo "$(readlink -n "$CURRCOURSE")/notes/figures/fig_001.tex"
       fi
       shift
       ;;
 
     -l | --last-lecture)
-      mapfile -t lectures < <(find $coursePath/notes -regextype posix-extended -regex '.*lec_[0-9]{3}\.tex.*' | sort)
+      mapfile -t lectures < <(find "$coursePath"/notes -regextype posix-extended -regex '.*lec_[0-9]{3}\.tex.*' | sort)
       if [[ ${#lectures[@]} -gt 0 ]]; then
         echo "${lectures[${#lectures[@]} - 1]}"
       else
@@ -178,13 +175,13 @@ while [ : ]; do
       ;;
 
     -L | --next-lecture)
-      mapfile -t lectures < <(find $coursePath/notes -regextype posix-extended -regex '.*lec_[0-9]{3}\.tex.*' | sort)
+      mapfile -t lectures < <(find "$coursePath"/notes -regextype posix-extended -regex '.*lec_[0-9]{3}\.tex.*' | sort)
       if [[ ${#lectures[@]} -gt 0 ]]; then
-        lastNumber="$(echo ${lectures[${#lectures[@]} - 1]} | sed 's/.*\/lec_\([0-9]\{3\}\).tex/\1/' | sed 's/[0]*\([1-9]*\)/\1/')"
-        nextNumber=$(printf "%03d" $(($lastNumber + 1)))
-        echo "$(readlink -n $CURRCOURSE)/notes/lec_$nextNumber.tex"
+        lastNumber="$(echo "${lectures[${#lectures[@]} - 1]}" | sed 's/.*\/lec_\([0-9]\{3\}\).tex/\1/' | sed 's/[0]*\([1-9]*\)/\1/')"
+        nextNumber=$(printf "%03d" $((lastNumber + 1)))
+        echo "$(readlink -n "$CURRCOURSE")/notes/lec_$nextNumber.tex"
       else
-        echo "$(readlink -n $CURRCOURSE)/notes/lec_001.tex"
+        echo "$(readlink -n "$CURRCOURSE")/notes/lec_001.tex"
       fi
       shift
       ;;
