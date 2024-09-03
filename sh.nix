@@ -6,16 +6,16 @@ let
     la   = "ls --all --long --header --git"           ;
     lt   = "ls --tree --level=3"                      ;
 
-    g    = "git"                                     ;
-    ga   = "git add"                                 ;
-    gs   = "git status"                              ;
-    gd   = "git diff"                                ;
-    gc   = "git commit -m"                           ;
-    gb   = "git branch"                              ;
-    go   = "git checkout"                            ;
-    gp   = "git push"                                ;
-    gm   = "git merge"                               ;
-    gf   = "git fetch"                               ;
+    g    = "git"                                      ;
+    ga   = "git add"                                  ;
+    gs   = "git status"                               ;
+    gd   = "git diff"                                 ;
+    gc   = "git commit -m"                            ;
+    gb   = "git branch"                               ;
+    go   = "git checkout"                             ;
+    gp   = "git push"                                 ;
+    gm   = "git merge"                                ;
+    gf   = "git fetch"                                ;
     gz   = "lazygit"                                  ;
     z    = "zellij"                                   ;
     za   = "zellij attach"                            ;
