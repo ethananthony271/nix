@@ -99,11 +99,10 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    git
-    neovim
     vim
+    clang
+    python3
     rofi-wayland
-    lazygit
     foot
     zellij
     mpd
@@ -115,18 +114,11 @@
     mako
     libnotify
     firefox
-    python3
-    luajitPackages.luarocks
-    luajitPackages.jsregexp
-    clang
-    tree-sitter
-    nodejs_22
     wl-clipboard
     wl-clip-persist
-    texliveFull
     zathura
+    texliveFull
     syncthing
-    betterbird
     pamixer
     brightnessctl
     nix-prefetch-scripts
@@ -140,9 +132,6 @@
     hyprpaper
     hyprpicker
     hyprcursor
-
-    python312Packages.python-lsp-server
-    nodePackages_latest.bash-language-server
   ];
 
   programs.neovim.enable = true;
