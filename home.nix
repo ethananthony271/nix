@@ -4,8 +4,8 @@
     ./config/apps/sh.nix
     ./config/apps/git.nix
     ./config/apps/nvim.nix
+    ./config/apps/mpd.nix
     ./config/scripts/scripts.nix
-    # ./config/apps/thunderbird.nix
   ];
 
   home.stateVersion = "24.05";
