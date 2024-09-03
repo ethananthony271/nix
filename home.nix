@@ -69,6 +69,37 @@ in
   programs.zsh = {
     enable = true;
     shellAliases = myAliases;
+    history = {
+      save = 5000;
+      size = 5000;
+      path = "$HOME/.zsh_history";
+      share = true;
+      ignoreDups = true;
+      ignoreSpace = true;
+      ignoreAllDups = true;
+    };
+    enableCompletion = false;
+    plugins = [
+      {
+        name = "zsh-completions";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-completions";
+          rev = "0.27.0";
+          sha256 = "1c2xx9bkkvyy0c6aq9vv3fjw7snlm0m5bjygfk5391qgjpvchd29";
+        };
+      }
+      {
+        name = "zsh-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "zsh-users";
+          repo = "zsh-syntax-highlighting";
+          rev = "master";
+          sha256 = "0zmq66dzasmr5pwribyh4kbkk23jxbpdw4rjxx0i7dx8jjp2lzl4";
+        };
+        file = "zsh-syntax-highlighting.zsh";
+      }
+    ];
   };
 
   home.sessionVariables = {
