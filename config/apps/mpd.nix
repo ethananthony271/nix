@@ -7,23 +7,27 @@
     playlistDirectory = /home/ea/.mpd/playlists;
     dataDir = /home/ea/.mpd;
     extraConfig = ''
-      state_file			              "~/.config/mpd/state"
-      restore_paused                "yes"
-      sticker_file			            "~/.config/mpd/sticker.sql"
-      auto_update                   "yes"
+      state_file        "~/.mpd/state"
+      restore_paused  "yes"
+      sticker_file      "~/.mpd/sticker.sql"
+      auto_update       "yes"
 
-      audio_output {
-          type                      "pipewire"
-          name                      "PipeWire Sound Server"
-          path                      "/tmp/mpd.fifo"
-          format                    "44100:16:2"
+      audio_output {  
+          type          "pipewire"
+          name          "PipeWire Sound Server"
+          path          "/tmp/mpd.fifo"
+          format        "44100:16:2"
       }
 
-      audio_output {
-          type                      "fifo"
-          name                      "my_fifo"
-          path                      "/tmp/mpd.fifo"
-          format                    "44100:16:2"
+      audio_output {  
+          type          "fifo"
+          name          "my_fifo"
+          path          "/tmp/mpd.fifo"
+          format        "44100:16:2"
+      }
+
+      input {
+        plugin          "curl"
       }
     '';
   };
