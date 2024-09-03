@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   myAliases = {
     sudo = "sudo "                                    ;
@@ -86,7 +86,7 @@ in
     '';
   };
 
-  home.packages = with pkgs; {
+  home.packages = with pkgs; [
     zsh
     bash
     fd
@@ -98,5 +98,5 @@ in
     zoxide
     fzf
     bottom
-  };
+  ];
 }
