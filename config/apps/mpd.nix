@@ -2,11 +2,11 @@
 
   services.mpd = {
     enable = true;
-    musicDirectory = "~/Music";
-    dbFile = "~/.mpd/database";
-    playlistDirectory = "~/.mpd/playlists";
-    dataDir = ".mpd/";
-    extraArgs = ''
+    musicDirectory = /home/ea/Music;
+    dbFile = "/home/ea/.mpd/database";
+    playlistDirectory = /home/ea/.mpd/playlists;
+    dataDir = /home/ea/.mpd;
+    extraConfig = ''
       state_file			              "~/.config/mpd/state"
       restore_paused                "yes"
       sticker_file			            "~/.config/mpd/sticker.sql"
@@ -34,7 +34,6 @@
     settings = {
       media_library_primary_tag = "album_artist"          ;
       ncmpcpp_directory         = "~/.config/ncmpcpp"     ;
-      mpd_music_dir             = "~/Music"               ;
       startup_screen            = "media_library"         ;
       visualizer_data_source    = "/tmp/mpd.fifo"         ;
       visualizer_output_name    = "PipeWire Sound Server" ;
@@ -130,13 +129,14 @@
       { key = "W"        ; command = "reset_search_engine"                                                                                                                     ; }
       #### TAG EDITOR ####
       { key = "w"        ; command = "save_tag_changes"                                                                                                                        ; }
-    ]
+    ];
   };
 
   home.packages = with pkgs; [
     mpd
     mpc-cli
     ncmpcpp
+    mpdscribble # config is currently .mpdscribble/mpdscribble.conf
   ];
 
 }
