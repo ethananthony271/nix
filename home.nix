@@ -64,6 +64,8 @@ in
   programs.bash = {
     enable = true;
     shellAliases = myAliases;
+    historySize = 5000;
+    historyFile = "$HOME/.bash_history";
   };
 
   programs.zsh = {
