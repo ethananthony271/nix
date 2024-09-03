@@ -1,13 +1,15 @@
 { pkgs, userSettings, ... }:
 {
   imports = [
-    ./sh.nix
+    ./config/apps/sh.nix
+    ./config/apps/git.nix
+    ./config/apps/nvim.nix
   ];
 
   home.stateVersion = "24.05";
 
-  home.username = userSettings.username;
-  home.homeDirectory = "/home/"+userSettings.username;
+  home.username = "ea";
+  home.homeDirectory = "/home/ea";
 
   programs.home-manager.enable = true;
 
