@@ -32,14 +32,14 @@
     enable = true;
     mpdMusicDir = "~/Music";
     settings = {
-      media_library_primary_tag = "album_artist"          ;
-      ncmpcpp_directory         = "~/.config/ncmpcpp"     ;
-      startup_screen            = "media_library"         ;
-      visualizer_data_source    = "/tmp/mpd.fifo"         ;
-      visualizer_output_name    = "PipeWire Sound Server" ;
-      visualizer_in_stereo      = "yes"                   ;
-      # visualizer_type           = "spectrum"              ;
-      visualizer_look           = "󰝤󰝤"                    ;
+      media_library_primary_tag = "album_artist"              ;
+      ncmpcpp_directory         = "~/.config/ncmpcpp"         ;
+      startup_screen            = "media_library"             ;
+      visualizer_data_source    = ''"/tmp/mpd.fifo"''         ;
+      visualizer_output_name    = ''"PipeWire Sound Server"'' ;
+      visualizer_in_stereo      = ''"yes"''                   ;
+      visualizer_type           = ''"ellipse"''               ;
+      visualizer_look           = ''"󰝤󰝤"''                    ;
     };
     bindings = [
       { key = "y"        ; command = "dummy"                                                                                                                                   ; }
