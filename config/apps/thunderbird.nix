@@ -2,14 +2,13 @@
 
   programs.thunderbird = {
     enable = true;
-    # profiles.school = {
-    #   name = "du";
-    #   isDefault = true;
-    # };
+    profiles.school = {
+      isDefault = true;
+    };
   };
 
-  home.packages = with args; {
+  home.packages = with pkgs; [
     thunderbird
-  };
+  ];
 
 }
