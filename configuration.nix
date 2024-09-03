@@ -39,11 +39,6 @@
 
   services.printing.enable = true;
 
-  services.cliphist = {
-    enable = true;
-    allowImages = true;
-  };
-
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
