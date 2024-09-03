@@ -92,6 +92,9 @@ in
     };
     plugins = [ ];
     initExtra = ''
+      PS1='%B%F{blue}%/ %(?.%F{green}.%F{red})>%f%b '
+      RPROMPT='%F{magenta}%*%f'
+
       source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
 
       bindkey '^f' autosuggest-accept
