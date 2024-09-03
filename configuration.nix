@@ -39,6 +39,11 @@
 
   services.printing.enable = true;
 
+  services.cliphist = {
+    enable = true;
+    allowImages = true;
+  };
+
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -114,8 +119,6 @@
     mako
     libnotify
     librewolf
-    wl-clipboard
-    wl-clip-persist
     zathura
     texliveFull
     syncthing
@@ -132,6 +135,9 @@
     hyprpaper
     hyprpicker
     hyprcursor
+    cliphist
+    wl-clipboard
+    wl-clip-persist
 
     keepassxc
     keepassxc-go
