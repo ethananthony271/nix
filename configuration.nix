@@ -136,6 +136,7 @@
     betterbird
     pamixer
     brightnessctl
+    nix-prefetch-scripts
 
     hyprland
     xdg-desktop-portal-hyprland
