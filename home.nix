@@ -41,7 +41,13 @@
   #  /etc/profiles/per-user/ea/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    MANPAGER = "nvim +Man!";
+    BOOKMARKS = "/home/ea/Documents/Personal/bookmarks.json";
+    CURRCOURSE = "/home/ea/Documents/School/quarter04/currentCourse";
+    CURRQUARTER = "/home/ea/Documents/School/quarter04";
+    TEMPLATES = "$CURRQUARTER/xlatex/templates";
   };
 
   # Let Home Manager install and manage itself.
