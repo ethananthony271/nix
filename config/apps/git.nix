@@ -25,7 +25,9 @@ in {
     userName = "Ethan Anthony";
     userEmail = "ethan.anthony@du.edu";
     delta.enable = true;
-    init.defaultBranch = "main";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   home.packages = with pkgs; [
