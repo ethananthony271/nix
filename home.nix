@@ -4,6 +4,7 @@
     ./config/apps/sh.nix
     ./config/apps/git.nix
     ./config/apps/nvim.nix
+    ./config/scripts/test.nix
     # ./config/apps/thunderbird.nix
   ];
 

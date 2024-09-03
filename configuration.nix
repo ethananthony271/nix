@@ -113,7 +113,7 @@
     waybar
     mako
     libnotify
-    firefox
+    librewolf
     wl-clipboard
     wl-clip-persist
     zathura
@@ -136,6 +136,8 @@
     keepassxc
     keepassxc-go
     keepass-diff
+
+    thunderbird
   ];
 
   programs.neovim.enable = true;

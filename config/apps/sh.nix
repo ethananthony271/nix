@@ -20,8 +20,7 @@ let
     cat  = "bat --theme gruvbox-dark "                ;
 
     p    = "python3"                                  ;
-    h    = "fc -ln 1 | fzf | wl-copy"                 ;
-    v    = "nvim"                                     ;
+    h    = "fc -ln 1 | fzf | wl-copy"                 ; v    = "nvim"                                     ;
     c    = "clear"                                    ;
     q    = "exit"                                     ;
     m    = "neomutt"                                  ;
@@ -86,5 +85,6 @@ in
     zoxide
     fzf
     delta
+    jq
   ];
 }
