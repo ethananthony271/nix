@@ -2,17 +2,17 @@
 let
   courseInfo = pkgs.writeShellApplication {
     name = "courseInfo";
-    runtimeInputs = [
+    runtimeInputs = with pkgs; [
       jq
-      sed
+      gnused
     ];
     text = builtins.readFile ./courseInfo;
   };
   courseTools = pkgs.writeShellApplication {
     name = "courseTools";
-    runtimeInputs = [
+    runtimeInputs = with pkgs; [
       jq
-      sed
+      gnused
     ];
     text = builtins.readFile ./courseTools;
   };
@@ -20,8 +20,8 @@ let
     name = "importMusic";
     runtimeInputs = with pkgs; [
       yt-dlp
-      beet
-      sed
+      beets
+      gnused
     ];
     text = builtins.readFile ./importMusic;
   };
@@ -29,5 +29,6 @@ in {
   home.packages = [
     courseInfo
     courseTools
+    importMusic
   ];
 }
