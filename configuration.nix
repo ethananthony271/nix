@@ -132,6 +132,10 @@
     hyprpaper
     hyprpicker
     hyprcursor
+
+    keepassxc
+    keepassxc-go
+    keepass-diff
   ];
 
   programs.neovim.enable = true;
