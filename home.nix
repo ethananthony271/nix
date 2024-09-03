@@ -91,6 +91,17 @@ in
       # };
     };
     plugins = [ ];
+    initExtra = ''
+      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
+
+      bindkey '^f' autosuggest-accept
+      bindkey '^k' history-search-backward
+      bindkey '^j' history-search-forward
+      bindkey '^[w' kill-region
+
+      eval "$(fzf --zsh)"
+      eval "$(zoxide init --cmd cd zsh)"
+    '';
   };
 
   home.sessionVariables = {
