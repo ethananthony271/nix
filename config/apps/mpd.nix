@@ -102,8 +102,8 @@
       { key = "="        ; command = "volume_up"                                                                                                                               ; }
       { key = "-"        ; command = "volume_down"                                                                                                                             ; }
       { key = "'"        ; command = "move_selected_items_down"                                                                                                                ; }
-      { key = "          ;"; command = "move_selected_items_up"                                                                                                                ; }
-      { key = "\""       ; command = [ "move_selected_items_down" "move_selected_items_down" "move_selected_items_down" "move_selected_items_down" "move_selected_items_down" ]; }
+      { key = ";"        ; command = "move_selected_items_up"                                                                                                                ; }
+      { key = "\\\""     ; command = [ "move_selected_items_down" "move_selected_items_down" "move_selected_items_down" "move_selected_items_down" "move_selected_items_down" ]; }
       { key = ":"        ; command = [ "move_selected_items_up" "move_selected_items_up" "move_selected_items_up" "move_selected_items_up" "move_selected_items_up" ]          ; }
       { key = "n"        ; command = "next_found_item"                                                                                                                         ; }
       { key = "N"        ; command = "previous_found_item"                                                                                                                     ; }
