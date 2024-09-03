@@ -11,7 +11,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "leoito"; # Define your hostname.
+  networking.hostName = "leoito";
   networking.networkmanager.enable = false;
   networking.wireless = {
     enable = true;
