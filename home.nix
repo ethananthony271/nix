@@ -1,107 +1,21 @@
-{ config, pkgs, lib, ... }:
-let
-  myAliases = {
-    sudo = "sudo "                                    ;
-    ls   = "eza --group-directories-first --hyperlink";
-    la   = "ls --all --long --header --git"           ;
-    lt   = "ls --tree --level=3"                      ;
-    ga   = "git add "                                 ;
-    gs   = "git status "                              ;
-    gd   = "git diff "                                ;
-    gc   = "git commit -m "                           ;
-    gb   = "git branch "                              ;
-    go   = "git checkout "                            ;
-    gp   = "git push "                                ;
-    gm   = "git merge "                               ;
-    gf   = "git fetch "                               ;
-    gz   = "lazygit"                                  ;
-    z    = "zellij"                                   ;
-    za   = "zellij attach"                            ;
-    zd   = "zellij delete-session"                    ;
-    zD   = "zellij delete-all-sessions"               ;
-    zk   = "zellij kill-session"                      ;
-    zK   = "zellij kill-all-sessions"                 ;
-    zp   = "zellij list-aliases"                      ;
-    zl   = "zellij list-sessions"                     ;
-    zr   = "zellij run"                               ;
-    ze   = "zellij run"                               ;
-    cat  = "bat --theme gruvbox-dark "                ;
-    p    = "python3"                                  ;
-    h    = "fc -ln 1 | fzf | wl-copy"                 ;
-    v    = "nvim"                                     ;
-    c    = "clear"                                    ;
-    q    = "exit"                                     ;
-    m    = "neomutt"                                  ;
-    d    = "yazi"                                     ;
-    n    = "ncmpcpp"                                  ;
-    f    = "fzf --preview 'bat --color=always {}'"    ;
-    btl  = "bluetoothctl"                             ;
-  };
-in
-  {
-  home.stateVersion = "24.05";
-
-  home.username = "ea";
-  home.homeDirectory = "/home/ea";
-
-  home.packages = [
+{ pkgs, userSettings, ... }:
+{
+  imports = [
+    ./sh.nix
   ];
 
-  home.file = {
-    # # Building this configuration will create a copy of 'dotfiles/screenrc' in
-    # # the Nix store. Activating the configuration will then make '~/.screenrc' a
-    # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+  home.stateVersion = "24.05";
 
-    # # You can also set the file content immediately.
-    # ".gradle/gradle.properties".text = ''
-    #   org.gradle.console=verbose
-    #   org.gradle.daemon.idletimeout=3600000
-    # '';
-  };
+  home.username = userSettings.username;
+  home.homeDirectory = "/home/"+userSettings.username;
 
-  programs.bash = {
-    enable = true;
-    shellAliases = myAliases;
-    historySize = 5000;
-    historyFile = "$HOME/.bash_history";
-  };
+  programs.home-manager.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    shellAliases = myAliases;
-    history = {
-      save = 5000;
-      size = 5000;
-      path = "$HOME/.zsh_history";
-      share = true;
-      ignoreDups = true;
-      ignoreSpace = true;
-      ignoreAllDups = true;
-    };
-    enableCompletion = true;
-    autosuggestion = {
-      enable = true;
-    };
-    syntaxHighlighting = {
-      enable = true;
-    };
-    plugins = [ ];
-    initExtra = ''
-      PS1='%B%F{blue}%/ %(?.%F{green}.%F{red})>%f%b '
-      RPROMPT='%F{magenta}%*%f'
-
-      source ${pkgs.zsh-fzf-tab}/share/fzf-tab/fzf-tab.plugin.zsh
-
-      bindkey '^f' autosuggest-accept
-      bindkey '^k' history-search-backward
-      bindkey '^j' history-search-forward
-      bindkey '^[w' kill-region
-
-      eval "$(fzf --zsh)"
-      eval "$(zoxide init --cmd cd zsh)"
-    '';
-  };
+  home.packages = with pkgs; [
+    git
+    zsh
+    bash
+  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -112,6 +26,4 @@ in
     CURRQUARTER = "/home/ea/Documents/School/quarter04";
     TEMPLATES = "$CURRQUARTER/xlatex/templates";
   };
-
-  programs.home-manager.enable = true;
 }
