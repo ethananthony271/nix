@@ -1,11 +1,11 @@
 { pkgs, userSettings, ... }:
 {
   imports = [
-    ./config/apps/sh.nix
-    ./config/apps/git.nix
-    ./config/apps/nvim.nix
-    ./config/apps/mpd.nix
-    ./config/scripts/scripts.nix
+    ./config/app/sh.nix
+    ./config/app/git.nix
+    ./config/app/nvim.nix
+    ./config/app/mpd.nix
+    ./config/script/scripts.nix
   ];
 
   home.stateVersion = "24.05";
