@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./config/hardware/bluetooth.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
