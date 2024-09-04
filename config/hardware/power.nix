@@ -6,8 +6,8 @@
     settings = {
       CPU_SCALING_GOVERNOR_ON_AC = "performance";
       CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
-      CPU_ENERGY_PERF_POLICY_ON_BAT = "balance";
-      CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
+      CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+      CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
       CPU_DRIVER_OPMODE_ON_AC = "active";
       CPU_DRIVER_OPMODE_ON_BAT = "active";
 
@@ -34,16 +34,10 @@
 
       PLATFORM_PROFILE_ON_AC = "performance";
       PLATFORM_PROFILE_ON_BAT = "low-power";
-
-      RADEON_DPM_STATE_ON_AC = "performance";
-      RADEON_DPM_STATE_ON_BAT = "battery";
-      RADEON_POWER_PROFILE_ON_AC = "high";
-      RADEON_POWER_PROFILE_ON_BAT = "low";
-
-      INTEL_GPU_MIN_FREQ_ON_AC = 250;
-      INTEL_GPU_MIN_FREQ_ON_BAT = 250;
     };
   };
+
+  powerManagement.cpuFreqGovernor = "performance";
 
   environment.systemPackages = with pkgs; [
     tlp
