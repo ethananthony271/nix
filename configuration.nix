@@ -125,6 +125,7 @@
     brightnessctl
     nix-prefetch-scripts
     beeper
+    bottom
 
     hyprland
     xdg-desktop-portal-hyprland
