@@ -5,7 +5,9 @@
     ./config/app/git.nix
     ./config/app/nvim.nix
     ./config/app/mpd.nix
-    ./config/script/scripts.nix
+    ./config/script/courseInfo.nix
+    ./config/script/courseTools.nix
+    ./config/script/importMusic.nix
   ];
 
   home.stateVersion = "24.05";
