@@ -121,6 +121,7 @@
     pamixer
     brightnessctl
     nix-prefetch-scripts
+    beeper
 
     hyprland
     xdg-desktop-portal-hyprland
