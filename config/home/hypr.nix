@@ -16,6 +16,14 @@
     };
   };
 
+  home.file = {
+    ".config/mako/config" = {
+      source = ./sources/mako/config;
+      executable = false;
+      recursive = false;
+    };
+  };
+
   home.packages = with pkgs; [
     hyprland
     xdg-desktop-portal-hyprland
@@ -32,6 +40,7 @@
     grimblast
     libnotify
     mako
+    libnotify
     rofi-wayland
     waybar
     pamixer
