@@ -1,5 +1,12 @@
 { pkgs, ... }: {
 
+  home.file = {
+    ".config/test/test.txt" = {
+      text = ''test'';
+      executable = false;
+    };
+  };
+
   home.packages = with pkgs; [
     neovim
     python3
