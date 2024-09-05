@@ -8,6 +8,14 @@
     };
   };
 
+  home.file = {
+    ".config/test/test.txt" = {
+      source = ./test/test.txt;
+      executable = false;
+      recursive = false;
+    }
+  }
+
   home.packages = with pkgs; [
     neovim
     python3
