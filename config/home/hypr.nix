@@ -39,4 +39,8 @@
     bottom
   ];
 
+  home.sessionVariables = {
+    BOOKMARKS = "/home/ea/Documents/Personal/bookmarks.json";
+  }
+
 }
