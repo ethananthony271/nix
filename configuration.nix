@@ -106,23 +106,16 @@
     vim
     clang
     python3
-    rofi-wayland
     foot
     zellij
     wget
     yazi
-    waybar
-    mako
-    libnotify
     librewolf
     zathura
     texliveFull
     syncthing
-    pamixer
-    brightnessctl
     nix-prefetch-scripts
     beeper
-    bottom
 
     keepassxc
     keepassxc-go
