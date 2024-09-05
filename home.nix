@@ -8,7 +8,6 @@
     ./config/home/importMusic.nix
     ./config/script/courseInfo.nix
     ./config/script/courseTools.nix
-    ./config/script/importMusic.nix
   ];
 
   home.stateVersion = "24.05";
