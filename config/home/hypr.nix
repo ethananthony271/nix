@@ -49,7 +49,7 @@
   ];
 
   home.sessionVariables = {
-    BOOKMARKS = "/home/ea/Documents/Personal/bookmarks.json";
+    BOOKMARKS = "/home/ea/.config/hypr/assets/bookmarks.json";
   }
 
 }
