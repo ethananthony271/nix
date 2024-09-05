@@ -31,7 +31,7 @@
     VISUAL = "nvim";
     MANPAGER = "nvim +Man!";
     BOOKMARKS = "/home/ea/Documents/Personal/bookmarks.json";
-    CURRCOURSE = "/home/ea/Documents/School/quarter04/currentCourse";
+    CURRCOURSE = "/home/ea/Documents/School/currentCourse";
     CURRQUARTER = "/home/ea/Documents/School/quarter04";
     TEMPLATES = "$CURRQUARTER/xlatex/templates";
   };
