@@ -7,8 +7,6 @@
     };
   };
 
-  hardware.pulseaudio.enable = true;
-
   environment.systemPackages = with pkgs; [
     bluez
   ];
