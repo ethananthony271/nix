@@ -109,9 +109,6 @@
     rofi-wayland
     foot
     zellij
-    mpd
-    mpc-cli
-    ncmpcpp
     wget
     yazi
     waybar
