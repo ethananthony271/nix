@@ -4,6 +4,7 @@
     ".config/nvim" = {
       source = ./sources/nvim;
       executable = false;
+      recursive = true;
     };
   };
 
