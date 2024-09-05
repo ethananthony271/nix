@@ -1,6 +1,7 @@
 { pkgs, userSettings, ... }:
 {
   imports = [
+    ./config/home/hypr.nix
     ./config/home/sh.nix
     ./config/home/git.nix
     ./config/home/nvim.nix
@@ -30,7 +31,6 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
     MANPAGER = "nvim +Man!";
-    BOOKMARKS = "/home/ea/Documents/Personal/bookmarks.json";
     CURRCOURSE = "/home/ea/Documents/School/currentCourse";
     CURRQUARTER = "/home/ea/Documents/School/quarter04";
     TEMPLATES = "$CURRQUARTER/xlatex/templates";
