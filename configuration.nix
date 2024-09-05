@@ -139,6 +139,7 @@
     cliphist
     wl-clipboard
     wl-clip-persist
+    grimblast
 
     keepassxc
     keepassxc-go
