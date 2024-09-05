@@ -1,8 +1,8 @@
 { pkgs, ... }: {
 
   home.file = {
-    ".config/test/test.txt" = {
-      source = ./sources/test;
+    ".config/nvim" = {
+      source = ./sources/nvim;
       executable = false;
     };
   };
