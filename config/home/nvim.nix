@@ -13,8 +13,8 @@
       source = ./test/test.txt;
       executable = false;
       recursive = false;
-    }
-  }
+    };
+  };
 
   home.packages = with pkgs; [
     neovim
