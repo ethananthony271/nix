@@ -26,7 +26,6 @@
 
   home.packages = with pkgs; [
     hyprland
-    xdg-desktop-portal-hyprland
     hyprshot
     hyprlock
     hyprlang
@@ -34,18 +33,17 @@
     hyprpaper
     hyprpicker
     hyprcursor
+    xdg-desktop-portal-hyprland
     cliphist
     wl-clipboard
     wl-clip-persist
     grimblast
-    libnotify
     mako
     libnotify
     rofi-wayland
     waybar
     pamixer
     brightnessctl
-    bottom
   ];
 
   home.sessionVariables = {
