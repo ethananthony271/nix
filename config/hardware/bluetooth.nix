@@ -3,7 +3,9 @@
     enable = true;
     powerOnBoot = true;
     settings = {
-      Experimental = true;
+      General = {
+        Experimental = true;
+      };
     };
   };
 
