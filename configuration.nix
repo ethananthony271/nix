@@ -127,20 +127,6 @@
     beeper
     bottom
 
-    hyprland
-    xdg-desktop-portal-hyprland
-    hyprshot
-    hyprlock
-    hyprlang
-    hypridle
-    hyprpaper
-    hyprpicker
-    hyprcursor
-    cliphist
-    wl-clipboard
-    wl-clip-persist
-    grimblast
-
     keepassxc
     keepassxc-go
     keepass-diff
