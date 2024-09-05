@@ -1,4 +1,4 @@
-library: ~/.config/library.db
+library: ~/.config/beets/library.db
 directory: ~/Music
 
 ignore:
