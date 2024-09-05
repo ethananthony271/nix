@@ -27,5 +27,7 @@ in {
 
   home.packages = [
     importMusic
+    pkgs.beets
+    pkgs.yt-dlp
   ];
 }
