@@ -23,6 +23,7 @@ return {
         "rasi",
         "vim",
         "vimdoc",
+        "yaml",
       },
       highlight = {
         enable = true,
