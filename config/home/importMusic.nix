@@ -12,18 +12,16 @@ let
 in {
 
   home.file = {
-    ".config/yt-dlp" = {
-      source = ./sources/yt-dlp;
+    ".config/yt-dlp/albumconfig.conf" = {
+      source = ./sources/yt-dlp/albumconfig.conf;
       executable = false;
-      recursive = true;
     };
   };
 
   home.file = {
-    ".config/beets" = {
-      source = ./sources/beets;
+    ".config/beets/config.yaml" = {
+      source = ./sources/beets/config.yaml;
       executable = false;
-      recursive = true;
     };
   };
 
