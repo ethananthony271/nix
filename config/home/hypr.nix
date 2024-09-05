@@ -22,6 +22,13 @@
     wl-clipboard
     wl-clip-persist
     grimblast
+    libnotify
+    mako
+    rofi-wayland
+    waybar
+    pamixer
+    brightnessctl
+    bottom
   ];
 
 }
