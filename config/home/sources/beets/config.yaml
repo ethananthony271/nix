@@ -1,6 +1,9 @@
 library: ~/.config/library.db
 directory: ~/Music
 
+ignore:
+  musicStagingGround
+
 import:
   write: yes
   copy: no
