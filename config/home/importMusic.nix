@@ -15,6 +15,7 @@ in {
     ".config/yt-dlp/albumconfig.conf" = {
       source = ./sources/yt-dlp/albumconfig.conf;
       executable = false;
+      recursive = false;
     };
   };
 
@@ -22,6 +23,7 @@ in {
     ".config/beets/config.yaml" = {
       source = ./sources/beets/config.yaml;
       executable = false;
+      recursive = false;
     };
   };
 

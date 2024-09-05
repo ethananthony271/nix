@@ -5,6 +5,7 @@
     ./config/home/git.nix
     ./config/home/nvim.nix
     ./config/home/mpd.nix
+    ./config/home/importMusic.nix
     ./config/script/courseInfo.nix
     ./config/script/courseTools.nix
     ./config/script/importMusic.nix
