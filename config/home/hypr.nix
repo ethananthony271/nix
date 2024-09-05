@@ -8,6 +8,14 @@
     };
   };
 
+  home.file = {
+    ".config/waybar" = {
+      source = ./sources/waybar;
+      executable = false;
+      recursive = true;
+    };
+  };
+
   home.packages = with pkgs; [
     hyprland
     xdg-desktop-portal-hyprland
