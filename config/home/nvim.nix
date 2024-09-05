@@ -2,7 +2,7 @@
 
   home.file = {
     ".config/test/test.txt" = {
-      text = ''test'';
+      source = ./sources/test;
       executable = false;
     };
   };
