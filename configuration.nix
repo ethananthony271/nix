@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./config/system/bluetooth.nix
       ./config/system/power.nix
+      ./config/system/network.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -14,15 +15,6 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  networking.hostName = "leoito";
-  networking.networkmanager.enable = false;
-  networking.wireless = {
-    enable = true;
-    userControlled.enable = true;
-    networks."ORBI30".psk = "royallotus939";
-    extraConfig = "ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel";
-  };
 
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
