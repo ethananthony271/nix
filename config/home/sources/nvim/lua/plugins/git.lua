@@ -71,7 +71,7 @@ return {
           -- Actions
           vim.keymap.set("n", "<leader>ghs", gitsigns.stage_hunk,                                                    { desc = "Stage Hunk"                })
           vim.keymap.set("n", "<leader>ghr", gitsigns.reset_hunk,                                                    { desc = "Reset Hunk"                })
-          vim.keymap.set("v", "<leader>ghs", function() gitsigns.stage_hunk{vim.fn.line('.'), vim.fn.line('v')} end, { desc = "Stage Hunk"                })
+          vim.keymap.set("v", "<leader>gha", function() gitsigns.stage_hunk{vim.fn.line('.'), vim.fn.line('v')} end, { desc = "Stage Hunk"                })
           vim.keymap.set("v", "<leader>ghr", function() gitsigns.reset_hunk{vim.fn.line('.'), vim.fn.line('v')} end, { desc = "Reset Hunk"                })
           vim.keymap.set("n", "<leader>ghu", gitsigns.undo_stage_hunk,                                               { desc = "Undo Stage Hunk"           })
           vim.keymap.set("n", "<leader>ghp", gitsigns.preview_hunk,                                                  { desc = "Preview Hunk"              })
