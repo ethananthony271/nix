@@ -55,7 +55,7 @@
     "mpd": {
       "format": "{stateIcon} {title} - {albumArtist}",
       "format-disconnected": "MPD (disconnected)",
-      "format-stopped": "  --------------------------------",
+      "format-stopped": "  ---",
       "interval": 10,
       "max-length": 35,
       "state-icons": {
