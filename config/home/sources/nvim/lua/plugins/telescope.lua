@@ -81,8 +81,8 @@ return {
             ["s"]  = fb_actions.toggle_all,
           },
         },
-      }
       require("telescope").load_extension("file_browser")
+      }
     end
   },
 }
