@@ -44,6 +44,7 @@
     waybar
     pamixer
     brightnessctl
+    wev
   ];
 
   home.sessionVariables = {
