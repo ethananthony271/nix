@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+  networking.hostName = "leoito";
+
   networking.networkmanager.enable = true;
 
   environement.systemPackages = [
