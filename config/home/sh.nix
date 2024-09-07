@@ -73,6 +73,14 @@ in
     '';
   };
 
+  home.file = {
+    ".config/spaceship.zsh" = {
+      source = ./sources/sh/spaceship.zsh;
+      executable = true;
+      recursive = false;
+    };
+  };
+
   home.packages = with pkgs; [
     zsh
     bash
