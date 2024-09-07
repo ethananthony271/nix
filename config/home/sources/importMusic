@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 while [[ $# -gt 0 ]]; do
-  yt-dlp --config-locations ~/.config/yt-dlp/albumconfig.conf "$@" &
+  yt-dlp --config-locations ~/.config/yt-dlp/albumconfig.conf "$1" &
   shift
 done
 wait
