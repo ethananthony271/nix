@@ -109,6 +109,7 @@
     syncthing
     nix-prefetch-scripts
     beeper
+    bottom
 
     keepassxc
     keepassxc-go
