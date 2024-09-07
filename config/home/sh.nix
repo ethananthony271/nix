@@ -1,33 +1,35 @@
 { pkgs, ... }:
 let
   myAliases = {
-    sudo = "sudo "                                    ;
-    ls   = "eza --group-directories-first --hyperlink";
-    la   = "ls --all --long --header --git"           ;
-    lt   = "ls --tree --level=3"                      ;
+    sudo = "sudo "                                       ;
+    ls   = "eza --group-directories-first --hyperlink"   ;
+    la   = "ls --all --long --header --git"              ;
+    lt   = "ls --tree --level=3"                         ;
 
-    z    = "zellij"                                   ;
-    za   = "zellij attach"                            ;
-    zd   = "zellij delete-session"                    ;
-    zD   = "zellij delete-all-sessions"               ;
-    zk   = "zellij kill-session"                      ;
-    zK   = "zellij kill-all-sessions"                 ;
-    zp   = "zellij list-aliases"                      ;
-    zl   = "zellij list-sessions"                     ;
-    zr   = "zellij run"                               ;
-    ze   = "zellij run"                               ;
+    z    = "zellij"                                      ;
+    za   = "zellij attach"                               ;
+    zd   = "zellij delete-session"                       ;
+    zD   = "zellij delete-all-sessions"                  ;
+    zk   = "zellij kill-session"                         ;
+    zK   = "zellij kill-all-sessions"                    ;
+    zp   = "zellij list-aliases"                         ;
+    zl   = "zellij list-sessions"                        ;
+    zr   = "zellij run"                                  ;
+    ze   = "zellij run"                                  ;
 
-    cat  = "bat --theme gruvbox-dark "                ;
+    cat  = "bat --theme gruvbox-dark "                   ;
 
-    p    = "python3"                                  ;
-    h    = "fc -ln 1 | fzf | wl-copy"                 ;
-    v    = "nvim"                                     ;
-    c    = "clear"                                    ;
-    q    = "exit"                                     ;
-    m    = "neomutt"                                  ;
-    d    = "yazi"                                     ;
-    n    = "ncmpcpp"                                  ;
-    f    = "fzf --preview 'bat --color=always {}'"    ;
+    p    = "python3"                                     ;
+    h    = "fc -ln 1 | fzf | wl-copy"                    ;
+    v    = "nvim"                                        ;
+    c    = "clear"                                       ;
+    q    = "exit"                                        ;
+    m    = "neomutt"                                     ;
+    d    = "yazi"                                        ;
+    n    = "ncmpcpp"                                     ;
+    f    = "fzf --preview 'bat --color=always {}'"       ;
+
+    tt   = "sh ~/.config/hypr/scripts/toggleTouchpad.sh" ;
   };
 in
   {
