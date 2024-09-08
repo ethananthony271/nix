@@ -116,6 +116,7 @@
     keepass-diff
 
     thunderbird
+    teams-for-linux
   ];
 
   programs.neovim.enable = true;
