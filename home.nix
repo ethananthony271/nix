@@ -8,6 +8,7 @@
     ./config/home/mpd.nix
     ./config/home/yazi.nix
     ./config/home/importMusic.nix
+    ./config/home/mime.nix
     ./config/script/courseInfo.nix
     ./config/script/courseTools.nix
   ];
