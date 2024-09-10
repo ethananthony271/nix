@@ -117,7 +117,6 @@
 
     thunderbird
     teams-for-linux
-    libreoffice
   ];
 
   programs.neovim.enable = true;
