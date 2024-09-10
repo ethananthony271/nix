@@ -40,4 +40,5 @@ return {
   s({ trig = ";~",  snippetType = "autosnippet"  }, { t("\\sim")        }),
   s({ trig = ";*",  snippetType = "autosnippet"  }, { t("\\cdot")       }),
   s({ trig = ";8",  snippetType = "autosnippet"  }, { t("\\times")      }),
+  s({ trig = ";$",  snippetType = "autosnippet"  }, { t("\\textdollar") }),
 }

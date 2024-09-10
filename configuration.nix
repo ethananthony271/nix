@@ -117,6 +117,8 @@
 
     thunderbird
     teams-for-linux
+    libreoffice
+    slack
   ];
 
   programs.neovim.enable = true;
