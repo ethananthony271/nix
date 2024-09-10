@@ -27,6 +27,7 @@ let
     m    = "neomutt"                                     ;
     d    = "yazi"                                        ;
     n    = "ncmpcpp"                                     ;
+    y    = "hyprland"                                    ;
     f    = "fzf --preview 'bat --color=always {}'"       ;
 
     tt   = "sh ~/.config/hypr/scripts/toggleTouchpad.sh" ;
