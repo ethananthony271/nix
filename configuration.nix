@@ -96,6 +96,7 @@
 
   environment.systemPackages = with pkgs; [
     moreutils
+    xdg-utils
     vim
     clang
     python3
