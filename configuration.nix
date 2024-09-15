@@ -118,8 +118,10 @@
 
     thunderbird
     teams-for-linux
-    libreoffice
     slack
+    gnome.nautilus
+    geogebra
+    zoom-us
   ];
 
   programs.neovim.enable = true;
