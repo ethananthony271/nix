@@ -126,7 +126,6 @@
 
     librewolf
 
-    swayimg
     libreoffice
 
     texliveFull
