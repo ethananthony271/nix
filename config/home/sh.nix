@@ -85,6 +85,7 @@ in
   };
 
   home.packages = with pkgs; [
+    git
     zsh
     bash
     fd
