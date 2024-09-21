@@ -33,7 +33,32 @@
     useXkbConfig = true; # use xkb.options in tty.
   };
 
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.cnijfilter2 ];
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+
+  # hardware.printers = {
+  #   ensurePrinters = [
+  #     {
+  #       name = "Dell_1250c";
+  #       location = "Home";
+  #       deviceUri = "http://192.168.178.2:631/printers/Dell_1250c";
+  #       model = "drv:///sample.drv/generic.ppd";
+  #       ppdOptions = {
+  #         PageSize = "A4";
+  #       };
+  #     }
+  #   ];
+  #   ensureDefaultPrinter = "Dell_1250c";
+  # };
 
   security.rtkit.enable = true;
   services.pipewire = {
@@ -122,6 +147,11 @@
     gnome.nautilus
     geogebra
     zoom-us
+    imagemagick
+    logisim
+    poppler_utils
+    swayimg
+    # inkscape
   ];
 
   programs.neovim.enable = true;
