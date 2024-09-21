@@ -1,5 +1,16 @@
 { pkgs, ... }: {
 
+  xdg.desktopEntries = {
+    yazi = {
+      name = "Yazi";
+      genericName = "File Manager";
+      exec = "yazi %u";
+      terminal = true;
+      categories = [ "Utility" "Core" "System" "FileTools" "FileManager" "ConsoleOnly" ];
+      mimeType = [ "inode/directory" ];
+    };
+  };
+
   home.file = {
     ".config/yazi" = {
       source = ./sources/yazi;
