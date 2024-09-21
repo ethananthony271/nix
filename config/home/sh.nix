@@ -97,5 +97,11 @@ in
     fzf
     delta
     jq
+    moreutils
+    xdg-utils
+    bottom
+    imagemagick
+    poppler_utils
+    wget
   ];
 }
