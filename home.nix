@@ -10,6 +10,7 @@
     ./config/home/mime.nix
     ./config/home/zathura.nix
     ./config/home/swayimg.nix
+    ./config/home/foot.nix
     ./config/home/importMusic.nix
     ./config/script/courseInfo.nix
     ./config/script/courseTools.nix
