@@ -45,10 +45,10 @@
     pamixer
     brightnessctl
     wev
+    foot
   ];
 
   home.sessionVariables = {
-    # BOOKMARKS = "/home/ea/.config/hypr/assets/bookmarks.json";
     BOOKMARKS = "/home/ea/Documents/Personal/bookmarks.json";
   };
 
