@@ -73,7 +73,7 @@
       "rotate": 0,
       "tooltip-format": "<tt>{calendar}</tt>",
       "calendar": {
-        "mode"          : "year",
+        "mode"          : "month",
         "mode-mon-col"  : 3,
         "weeks-pos"     : "left",
         "on-scroll"     : 1,
