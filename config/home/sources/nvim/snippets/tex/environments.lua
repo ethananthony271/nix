@@ -48,9 +48,9 @@ local buffer_is_empty = function()
 end
 
 return {
-  s( -- env -> Generic Environment )
+  s( -- ee -> Generic Environment )
     {
-      trig = "env",
+      trig = "ee",
     },
     fmta(
       [[
@@ -97,9 +97,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- tb -> Tabularray Environment )
+  s( -- et -> Tabularray Environment )
     {
-      trig = "tb",
+      trig = "et",
     },
     fmta(
       [[
@@ -121,9 +121,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- fg -> Figure Environment )
+  s( -- ef -> Figure Environment )
     {
-      trig = "fg",
+      trig = "ef",
     },
     fmta(
       [[
@@ -188,9 +188,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- sfg -> Subfigure Environment )
+  s( -- esf -> Subfigure Environment )
     {
-      trig = "sfg",
+      trig = "esf",
     },
     fmta(
       [[
@@ -265,9 +265,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- wfg -> Wrapfigure Environment )
+  s( -- ewf -> Wrapfigure Environment )
     {
-      trig = "wfg",
+      trig = "ewf",
     },
     fmta(
       [[
@@ -339,9 +339,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- ls -> List Environment )
+  s( -- el -> List Environment )
     {
-      trig = "ls",
+      trig = "el",
     },
     fmta(
       [[
@@ -363,9 +363,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- fm -> Forumla Environment )
+  s( -- em -> Forumla Environment )
     {
-      trig = "fm",
+      trig = "em",
     },
     fmta(
       [[
@@ -382,7 +382,7 @@ return {
       condition = line_begin
     }
   ),
-  s( -- ex -> Forumla Environment )
+  s( -- ex -> Example Environment )
     {
       trig = "ex",
     },
@@ -400,9 +400,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- def -> Definition Environment )
+  s( -- ed -> Definition Environment )
     {
-      trig = "def",
+      trig = "ed",
     },
     fmta(
       [[
@@ -419,9 +419,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- tk -> TikZ Environment )
+  s( -- ez -> TikZ Environment )
     {
-      trig = "tk",
+      trig = "ez",
     },
     fmta(
       [[
@@ -437,9 +437,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- ax -> Axis Environment (Tikz) )
+  s( -- ea -> Axis Environment (Tikz) )
     {
-      trig = "ax",
+      trig = "ea",
     },
     fmta(
       [[
@@ -478,9 +478,9 @@ return {
       condition = line_begin
     }
   ),
-  s( -- kv -> Known Values Example Split Tcolorbox )
+  s( -- ev -> Known Values Example Split Tcolorbox )
     {
-      trig = "kv",
+      trig = "ev",
     },
     fmta(
       [[
@@ -504,6 +504,33 @@ return {
       {
         i(1),
         i(0),
+      }
+    ),
+    {
+      condition = line_begin
+    }
+  ),
+  s( -- emx -> Matrix Environment )
+    {
+      trig = "emx",
+    },
+    fmta(
+      [[
+        \begin{<>}
+          <>
+        \end{<>}
+      ]],
+      {
+        c(1, {
+          t("matrix"),
+          t("vmatrix"),
+          t("Vmatrix"),
+          t("bmatrix"),
+          t("Bmatrix"),
+          t("pmatrix"),
+        }),
+        d(2, get_visual),
+        rep(1),
       }
     ),
     {

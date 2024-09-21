@@ -117,6 +117,26 @@ return {
       condition = line_begin
     }
   ),
+  s( -- lg -> Logic Node )
+    {
+      trig = "lg",
+      snippetType = "autosnippet"
+    },
+    fmta(
+      [[
+        \node[<> port] (<>) at (<>) {<>};
+      ]],
+      {
+        i(1),
+        i(2),
+        i(3),
+        i(4),
+      }
+    ),
+    {
+      condition = line_begin
+    }
+  ),
   s( -- arc -> TikZ Arc )
     {
       trig = "arc",
