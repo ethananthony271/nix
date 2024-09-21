@@ -120,38 +120,38 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    moreutils
-    xdg-utils
-    vim
+    foot
+    neovim
+    zellij
+
+    librewolf
+
+    swayimg
+    libreoffice
+
+    texliveFull
+
+    syncthing
+
+    nix-prefetch-scripts
+
+    beeper
+    thunderbird
+    teams-for-linux
+    slack
+    zoom-us
+
     clang
     python3
-    foot
-    zellij
-    wget
-    yazi
-    librewolf
-    zathura
-    texliveFull
-    syncthing
-    nix-prefetch-scripts
-    beeper
-    bottom
 
     keepassxc
     keepassxc-go
     keepass-diff
 
-    thunderbird
-    teams-for-linux
-    slack
     gnome.nautilus
-    geogebra
-    zoom-us
-    imagemagick
+
     logisim
-    poppler_utils
-    swayimg
-    # inkscape
+    inkscape
   ];
 
   programs.neovim.enable = true;
