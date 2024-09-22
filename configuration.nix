@@ -104,11 +104,6 @@
     packages = with pkgs; [];
   };
 
-  programs.hyprland = {
-    enable = true;
-    xwayland.enable = true;
-  };
-
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk
