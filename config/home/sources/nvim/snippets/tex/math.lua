@@ -120,14 +120,18 @@ return {
     },
     fmta(
       [[
-        <>\int_{<>}^{<>} <> \,<>
+        <>\<>_{<>}^{<>} <> \,<>
       ]],
       {
         f( function(_, snip) return snip.captures[1] end ),
-        i(1),
+        c(1, {
+          t("int"),
+          t("oint"),
+        }),
         i(2),
-        d(3, get_visual),
-        i(4),
+        i(3),
+        d(4, get_visual),
+        i(5),
       }
     ),
     {}
