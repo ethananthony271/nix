@@ -143,10 +143,6 @@
     clang
     python3
 
-    keepassxc
-    keepassxc-go
-    keepass-diff
-
     gnome.nautilus
 
     logisim
