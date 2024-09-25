@@ -137,11 +137,30 @@
     ];
   };
 
+  home.file = {
+    ".config/mpd-notification.conf" = {
+      text = ''
+        host = localhost
+        port = 6600
+        scale = 200
+        text-topic = MPD Notification
+        text-play = Playing <b>%t</b>\nby <i>%a</i>\nfrom <i>%A</i>
+        text-pause = Paused <b>%t</b>\nby <i>%a</i>\nfrom <i>%A</i>
+        text-stop = Stopped playback
+        timeout = 5
+        music-dir = /home/ea/Music/
+      '';
+      executable = false;
+      recursive = false;
+    };
+  };
+
   home.packages = with pkgs; [
     mpd
     mpc-cli
     ncmpcpp
     mpdscribble # config is currently .mpdscribble/mpdscribble.conf
+    mpd-notification
   ];
 
 }
