@@ -10,7 +10,7 @@
       system = "x86_64-linux";
       pkgs = import inputs.nixpkgs { inherit system; };
     in {
-      devShells.${system}.python38 = pkgs.mkShell {
+      devShells.${system}.python39 = pkgs.mkShell {
         nativeBuildInputs = with pkgs;
           let
             devpython = pkgs.python38.withPackages
