@@ -105,5 +105,7 @@ in
     poppler_utils
     wget
     croc
+
+    python3
   ];
 }
