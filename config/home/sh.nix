@@ -104,5 +104,6 @@ in
     imagemagick
     poppler_utils
     wget
+    croc
   ];
 }
