@@ -114,6 +114,11 @@
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
   ];
 
+  programs.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+  };
+
   environment.systemPackages = with pkgs; [
     foot
     neovim
@@ -142,6 +147,8 @@
 
     logisim
     inkscape
+
+    pavucontrol
   ];
 
   programs.neovim.enable = true;
