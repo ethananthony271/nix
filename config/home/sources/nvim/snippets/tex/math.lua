@@ -142,13 +142,17 @@ return {
     },
     fmta(
       [[
-        <>\sum_{<>}^{<>} <>
+        <>\<>_{<>}^{<>} <>
       ]],
       {
         f( function(_, snip) return snip.captures[1] end ),
-        i(1),
+        c(1, {
+          t("sum"),
+          t("prod"),
+        }),
         i(2),
-        d(3, get_visual),
+        i(3),
+        d(4, get_visual),
       }
     ),
     {}
@@ -179,7 +183,7 @@ return {
         \hat{<>}<>
       ]],
       {
-        i(1),
+        d(1, get_visual),
         i(0),
       }
     ),
@@ -194,7 +198,7 @@ return {
         \overline{<>}<>
       ]],
       {
-        i(1),
+        d(1, get_visual),
         i(0),
       }
     ),
@@ -209,7 +213,7 @@ return {
         \overrightarrow{<>}<>
       ]],
       {
-        i(1),
+        d(1, get_visual),
         i(0),
       }
     ),
@@ -224,7 +228,7 @@ return {
         \overleftarrow{<>}<>
       ]],
       {
-        i(1),
+        d(1, get_visual),
         i(0),
       }
     ),
@@ -239,7 +243,7 @@ return {
         ^{<>}
       ]],
       {
-        i(1),
+        d(1, get_visual),
       }
     ),
     {}
@@ -253,21 +257,7 @@ return {
         _{<>}
       ]],
       {
-        i(1),
-      }
-    ),
-    {}
-  ),
-  s( -- ^^ -> Hat )
-    {
-      trig = "^^",
-    },
-    fmta(
-      [[
-        \hat{<>}
-      ]],
-      {
-        i(1),
+        d(1, get_visual),
       }
     ),
     {}

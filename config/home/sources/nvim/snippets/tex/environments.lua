@@ -425,12 +425,17 @@ return {
     },
     fmta(
       [[
-        \begin{tikzpicture}
+        \begin{<>}
           <>
-        \end{tikzpicture}
+        \end{<>}
       ]],
       {
-        d(1, get_visual),
+        c(1, {
+          t("tikzpicture"),
+          t("circuitikz"),
+        }),
+        d(2, get_visual),
+        rep(1)
       }
     ),
     {
@@ -504,6 +509,24 @@ return {
       {
         i(1),
         i(0),
+      }
+    ),
+    {
+      condition = line_begin
+    }
+  ),
+  s( -- ec -> Center Environment )
+    {
+      trig = "ec",
+    },
+    fmta(
+      [[
+        \begin{center}
+          <>
+        \end{center}
+      ]],
+      {
+        d(1, get_visual),
       }
     ),
     {
