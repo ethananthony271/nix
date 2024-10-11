@@ -30,7 +30,8 @@ audio = [
   { run = 'libreoffice "$@"',               orphan = true,        desc = "LibreOffice" },
 ]                                           
 image = [                                   
-  { run = 'nsxiv -a "$@"',                  orphan = true,        desc = "nsxiv"       },
+  { run = 'xdg-open "$@"',                  orphan = true,        desc = "swayimg"     },
+  { run = 'swayimg "$@"',                   orphan = true,        desc = "swayimg"     },
   { run = 'libreoffice "$@"',               orphan = true,        desc = "LibreOffice" },
 ]                                           
 office = [                                  
