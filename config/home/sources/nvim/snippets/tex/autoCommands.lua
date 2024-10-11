@@ -69,7 +69,7 @@ return {
   s({ trig = ";la",  snippetType = "autosnippet"  }, { t("\\land")     }),
   s({ trig = ";lo",  snippetType = "autosnippet"  }, { t("\\lor")      }),
   s({ trig = ";lx",  snippetType = "autosnippet"  }, { t("\\oplus")    }),
-  s({ trig = ";la",  snippetType = "autosnippet"  }, { t("\\forall")   }),
+  s({ trig = ";lf",  snippetType = "autosnippet"  }, { t("\\forall")   }),
   s({ trig = ";le",  snippetType = "autosnippet"  }, { t("\\exists")   }),
   s({ trig = ";lE",  snippetType = "autosnippet"  }, { t("\\exists !") }),
   s({ trig = ";lb",  snippetType = "autosnippet"  }, { t("\\bot")      }),
