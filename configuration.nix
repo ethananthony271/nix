@@ -123,6 +123,7 @@
     inkscape
 
     pavucontrol
+    mindustry-wayland
   ];
 
   programs.neovim.enable = true;
