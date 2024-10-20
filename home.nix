@@ -12,6 +12,7 @@
     ./config/home/swayimg.nix
     ./config/home/foot.nix
     ./config/home/keepass.nix
+    ./config/home/gaming.nix
     ./config/home/importMusic.nix
     ./config/script/courseInfo.nix
     ./config/script/courseTools.nix
