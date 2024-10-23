@@ -105,6 +105,7 @@ in
     poppler_utils
     wget
     croc
+    typioca
 
     python3
   ];
