@@ -120,6 +120,7 @@
     gnome.nautilus
 
     logisim
+    digital
     inkscape
 
     pavucontrol
