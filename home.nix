@@ -2,7 +2,6 @@
 {
   imports = [
     ./config/home/hypr.nix
-    ./config/home/cursor.nix
     ./config/home/sh.nix
     ./config/home/git.nix
     ./config/home/nvim.nix
