@@ -298,7 +298,7 @@ return {
       ]],
       {
         c(1, {
-          t("left"),
+          t("right"),
           t("big"),
           t("bigg"),
         }),
