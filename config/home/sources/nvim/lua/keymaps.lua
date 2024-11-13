@@ -15,8 +15,8 @@ vim.g.maplocalleader = " "
 vim.keymap.set("n", "U",            "<C-r>",                                        { noremap = true, silent = true,            desc = "Redo"                                })
 vim.keymap.set("n", "L",            "$",                                            { noremap = true, silent = true,            desc = "Go to End of Line"                   })
 vim.keymap.set("n", "H",            "0",                                            { noremap = true, silent = true,            desc = "Go to Front of Line"                 })
-vim.keymap.set("n", "<C-'>",        "<C-y>",                                        { noremap = true, silent = true,            desc = "Move Screen Up"                      })
-vim.keymap.set("n", "<C-;>",        "<C-e>",                                        { noremap = true, silent = true,            desc = "Move Screen Down"                    })
+vim.keymap.set("n", "<C-;>",        "<C-y>",                                        { noremap = true, silent = true,            desc = "Move Screen Up"                      })
+vim.keymap.set("n", "<C-'>",        "<C-e>",                                        { noremap = true, silent = true,            desc = "Move Screen Down"                    })
 
 vim.keymap.set("n", "<leader>`",    "<cmd>Alpha<CR>",                               { noremap = true, silent = true,            desc = "Return to Homepage"                  })
 vim.keymap.set("n", "<leader>?",    "<cmd>WhichKey<CR>",                            { noremap = true, silent = true,            desc = "Display Keymaps"                     })
