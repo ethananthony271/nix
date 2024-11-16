@@ -5,15 +5,19 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    inputs.hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
-    let
-      lib = nixpkgs.lib;
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    home-manager,
+    hyprpanel,
+    ...
+    }: let
       system = "x86_64-linux";
+      lib = nixpkgs.lib;
       pkgs = nixpkgs.legacyPackages.${system};
-      overlays = [ inputs.hyprpanel.overlay ];
     in {
     nixosConfigurations = {
       leoito = lib.nixosSystem {
@@ -23,8 +27,15 @@
     };
     homeConfigurations = {
       ea = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        # inherit pkgs;
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [
+            inputs.hyprpanel.overlay
+          ];
+        };
         modules = [ ./home.nix ];
+        # pkgs.overlays = [ inputs.hyprpanel.overlay ];
       };
     };
   };
