@@ -13,6 +13,7 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+      overlays = [ inputs.hyprpanel.overlay ];
     in {
     nixosConfigurations = {
       leoito = lib.nixosSystem {
@@ -24,7 +25,6 @@
       ea = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [ ./home.nix ];
-        overlays = [ inputs.hyprpanel.overlay ];
       };
     };
   };
