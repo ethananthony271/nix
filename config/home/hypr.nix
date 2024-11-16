@@ -16,13 +16,13 @@
     };
   };
 
-  home.file = {
-    ".config/mako/config" = {
-      source = ./sources/mako/config;
-      executable = false;
-      recursive = false;
-    };
-  };
+  # home.file = {
+  #   ".config/mako/config" = {
+  #     source = ./sources/mako/config;
+  #     executable = false;
+  #     recursive = false;
+  #   };
+  # };
 
   home.packages = with pkgs; [
     hyprland
@@ -33,12 +33,13 @@
     hyprpaper
     hyprpicker
     hyprcursor
+    hyprpanel
     xdg-desktop-portal-hyprland
     cliphist
     wl-clipboard
     wl-clip-persist
     grimblast
-    mako
+    # mako
     libnotify
     rofi-wayland
     waybar
