@@ -106,6 +106,7 @@ in
     wget
     croc
     typioca
+    killall
 
     python3
   ];

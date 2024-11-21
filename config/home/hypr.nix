@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ inputs, pkgs, ... }: {
 
   home.file = {
     ".config/hypr" = {
@@ -8,12 +8,22 @@
     };
   };
 
-  home.file = {
-    ".config/waybar" = {
-      source = ./sources/waybar;
-      executable = false;
-      recursive = true;
-    };
+  # home.file = {
+  #   ".config/waybar" = {
+  #     source = ./sources/waybar;
+  #     executable = false;
+  #     recursive = true;
+  #   };
+  # };
+
+  imports = [ inputs.ags.homeManagerModules.default ];
+  programs.ags = {
+    enable = true;
+    extraPackages = with pkgs; [
+      gtksourceview
+      webkitgtk
+      accountsservice
+    ];
   };
 
   # home.file = {
@@ -33,7 +43,7 @@
     hyprpaper
     hyprpicker
     hyprcursor
-    hyprpanel
+    # hyprpanel
     xdg-desktop-portal-hyprland
     cliphist
     wl-clipboard
@@ -42,7 +52,7 @@
     # mako
     libnotify
     rofi-wayland
-    waybar
+    # waybar
     pamixer
     brightnessctl
     wev
