@@ -26,13 +26,13 @@
     ];
   };
 
-  # home.file = {
-  #   ".config/mako/config" = {
-  #     source = ./sources/mako/config;
-  #     executable = false;
-  #     recursive = false;
-  #   };
-  # };
+  home.file = {
+    ".config/mako/config" = {
+      source = ./sources/mako/config;
+      executable = false;
+      recursive = false;
+    };
+  };
 
   home.packages = with pkgs; [
     hyprland
@@ -49,7 +49,7 @@
     wl-clipboard
     wl-clip-persist
     grimblast
-    # mako
+    mako
     libnotify
     rofi-wayland
     # waybar

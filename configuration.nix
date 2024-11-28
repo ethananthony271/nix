@@ -119,7 +119,6 @@
 
     gnome.nautilus
 
-    logisim
     digital
     inkscape
 

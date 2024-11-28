@@ -14,7 +14,6 @@
     self,
     nixpkgs,
     home-manager,
-    # hyprpanel,
     ...
     }: let
       system = "x86_64-linux";
@@ -31,13 +30,9 @@
       ea = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs {
           inherit system;
-          # overlays = [
-          #   inputs.hyprpanel.overlay
-          # ];
         };
         extraSpecialArgs = { inherit inputs; };
         modules = [ ./home.nix ];
-        # pkgs.overlays = [ inputs.hyprpanel.overlay ];
       };
     };
   };
