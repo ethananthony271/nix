@@ -43,7 +43,6 @@
     hyprpaper
     hyprpicker
     hyprcursor
-    # hyprpanel
     xdg-desktop-portal-hyprland
     cliphist
     wl-clipboard
@@ -57,6 +56,10 @@
     brightnessctl
     wev
     foot
+  ];
+
+  wayland.windowManager.hyprland.plugins = [
+    pkgs.hyprlandPlugins.hyprexpo
   ];
 
   home.sessionVariables = {
