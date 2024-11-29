@@ -91,7 +91,7 @@
       } {
         # Song Info
         monitor = "";
-        text = "cmd[update:1000] echo $(~/songDetails.sh)";
+        text = "cmd[update:1000] echo $(/home/ea/.dotfiles/config/home/sources/hypr/scripts/songDetails.sh)";
         color = "rgba(235, 219, 178, .75)";
         font_size = 16;
         font_family = "Fira Code Nerd Font Mono";
