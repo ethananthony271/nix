@@ -8,6 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     ags.url = "github:Aylur/ags";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = inputs @ {
@@ -22,6 +23,7 @@
     in {
     nixosConfigurations = {
       leoito = lib.nixosSystem {
+        specialArgs = { inherit inputs; };
         inherit system;
         modules = [ ./configuration.nix ];
       };

@@ -1,4 +1,4 @@
-{ pkgs, userSettings, ... }:
+{ inputs, pkgs, userSettings, ... }:
 {
   imports = [
     ./config/home/hypr.nix
