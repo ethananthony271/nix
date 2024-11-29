@@ -1,3 +1,4 @@
+# alsdifjasldifj
 { inputs, config, lib, pkgs, ... }:
 
 {
@@ -127,6 +128,7 @@
     pavucontrol
 
     nix-index
+    mediawriter
   ];
 
   programs.neovim.enable = true;
